@@ -105,13 +105,12 @@ def all_holidays_with_bbq(holiday_hash)
     holiday_hash.map do |season, data|
       data.map do |attribute, value|
         supply = holiday_hash[season][attribute]
-        supply.select{ |i| i == "BBQ"}
+        #supply.select{ |i| i == "BBQ"}
         if supply.include?("BBQ")
           attribute
         end
       end
-    #end.flatten.compact
-  end.flatten.compact
+    end.flatten.compact
 end
 
 #binding.pry
